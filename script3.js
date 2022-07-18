@@ -8,12 +8,12 @@ function toggleMenu() {
         menu.classList.remove("active");
 
         // adds the menu (hamburger) icon
-        toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-bars'></i>";
+        toggle.querySelector("a").innerHTML = "<i class='lni lni-menu'></i>";
     } else {
         menu.classList.add("active");
 
         // adds the close (x) icon
-        toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-times'></i>";
+        toggle.querySelector("a").innerHTML = "<i class='lni lni-close'></i>";
     }
 }
 
