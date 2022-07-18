@@ -1,0 +1,356 @@
+/*general*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Tahoma", sans-serif;
+  font-size: 100%;
+  background-color: #041a25;
+  overflow: hidden;
+  color: #fffacd;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*nav*/
+
+nav {
+  font-size: 2em;
+  background-color: #23587c;
+  padding: 5px 15px;
+}
+
+nav a {
+  color: #fffacd;
+}
+
+/*Design for Desktop, Tablet, Mobile */
+h1 {
+  color: #ffd700;
+  padding-bottom: 2.5%;
+  font-size: 4em;
+  text-align: center;
+}
+
+span {
+  color: #a2ded0;
+  text-decoration: underline;
+}
+
+
+.wip {
+  font-size: 2.8em;
+}
+
+.linkedIn {
+  color: #fffacd;
+  text-decoration: underline;
+}
+
+.contact {
+  font-size: 1.5em;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+.p-style {
+  padding-bottom: 3.5%;
+}
+
+/*Flex container*/
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 0.625em;
+  margin: auto;
+  text-align: center;
+}
+
+.menu li {
+  cursor: pointer;
+  margin: auto;
+  flex: auto;
+  text-align: center;
+}
+
+.menu li:hover {
+  background-color: #041a25;
+  color: black;
+}
+
+.item {
+    padding: 0.325em;
+}
+
+.item a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+
+.clicked {
+  border: 0.5px solid #fffacd;
+}
+
+/* Mobile and tablet menu */
+@media screen and (max-width: 968px) {
+  .menu {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .menu li a {
+      display: block;
+      padding: 2.5% 1.8%;
+  }
+
+  .logo {
+    order: 0;
+    flex: 1;
+  }
+
+  .toggle {
+      font-size: 20px;
+      order: 1;
+      flex: 1;
+  }
+
+  .item {
+      width: 100%;
+      text-align: center;
+      display: none;
+      order: 2;
+      font-size: 73%;
+      padding: 1.2%;
+  }
+
+  nav {
+    padding: 2%;
+  }
+
+  .active .item {
+      display: block;
+  }
+
+  /* Design */
+  main {
+    padding-left: 5%;
+    padding-top: 2.5%;
+    padding-right: 5%;
+  }
+
+  .home {
+    padding-top: 7%;
+    padding-left: 12%;
+    padding-right: 15%;
+  }
+
+  .home-heading {
+    padding-bottom: 5%;
+  }
+
+  .home-text {
+    font-size: 1.25em;
+    line-height: 1.45em;
+  }
+
+  .about {
+    padding-top: 3.4%;
+  }
+
+  .about-text {
+    font-size: 1.075em;
+    padding-left: 11%;
+    padding-right: 15%;
+    line-height: 1.45em;
+  }
+
+  .experience {
+    padding-left: 3%;
+    padding-top: 2%;
+  }
+
+  .heading2 {
+    color: #ffd700;
+    padding-bottom: 2%;
+    font-size: 2.15em;
+  }
+
+  .employment {
+    padding-bottom: 3%;
+  }
+
+  .heading4 {
+    font-weight: 600;
+    font-size: 1.25em;
+    padding-bottom: 0.7%;
+  }
+
+  .heading5 {
+    font-size: 0.85em;
+    padding-bottom: 2.3%;
+  }
+
+  .education-text {
+    font-size: 0.85em;
+    padding-left: 5%;
+    padding-bottom: 2.3%;
+  }
+
+  .education-heading5 {
+    font-size: 0.85em;
+    padding-bottom: 0.5%;
+  }
+}
+
+/* Desktop menu */
+@media screen and (min-width: 968px) {
+    .menu {
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 40%;
+    }
+
+
+    .logo {
+        order: 0;
+        padding-bottom: 40%;
+    }
+
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: 90%;
+        font-size: 73%;
+        padding: 5% 0;
+    }
+
+    nav {
+      width: 17.5%;
+      height: 100%;
+      align-content: center;
+      padding: 10px;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    /* Design */
+    main {
+      padding-left: 20%;
+      padding-top: 2.5%;
+      padding-right: 5%;
+    }
+
+    .home {
+      padding-top: 15%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .home-heading {
+      padding-bottom: 5%;
+    }
+
+    .home-text {
+      font-size: 1.25em;
+      line-height: 1.45em;
+      padding-left: 5.5%;
+    }
+
+    .about {
+      padding-top: 3.4%;
+    }
+
+    .about-text {
+      font-size: 1.075em;
+      padding-left: 11%;
+      padding-right: 9%;
+      line-height: 1.45em;
+    }
+
+    .experience {
+      padding-left: 3%;
+      padding-top: 2%;
+    }
+
+    .heading2 {
+      color: #ffd700;
+      padding-bottom: 2%;
+      font-size: 2.15em;
+    }
+
+    .employment {
+      padding-bottom: 3%;
+    }
+
+    .heading4 {
+      font-weight: 600;
+      font-size: 1.25em;
+      padding-bottom: 0.7%;
+    }
+
+    .heading5 {
+      font-size: 0.85em;
+      padding-bottom: 2.3%;
+    }
+
+    .education-text {
+      font-size: 0.85em;
+      padding-left: 5%;
+      padding-bottom: 2.3%;
+    }
+
+    .education-heading5 {
+      font-size: 0.85em;
+      padding-bottom: 0.5%;
+    }
+
+}
+
+/*footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 3.5%;
+  padding-bottom: 1.6%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.footer {
+  text-decoration: none;
+  color: #fffacd;
+}
